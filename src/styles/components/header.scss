@@ -1,0 +1,227 @@
+@import '../var.scss';
+
+.header{
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    &__cat{
+        position: fixed;
+        top: 0;
+        left: -1000px;
+        padding: 20px;
+        padding-top: 150px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        height: 100vh;
+        overflow: auto;
+        transition: 0.5s;
+        &.active {
+            left: 0;
+        }
+        .category {
+            &__link {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            &__box {
+                margin: unset;
+                margin-right: 10px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    &__top{
+        background-color: lighten($green, $amount: 10%);
+        padding: 10px 0px;
+        z-index: 3;
+        position: relative;
+    }
+    &__menu {
+        display: flex;
+        a{
+            color: $white;
+            margin: 0px 15px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        li{
+            &:first-child {
+                a{
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    &__phone{
+        color: $white;
+        margin-left: 20px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    &__socials{
+        display: flex;
+        margin-left: auto;
+        a{
+            margin: 0px 5px;
+            display: flex;
+            align-items: center;
+            padding: 0px 5px;
+            border-radius: 5px;
+            &:hover{
+                img{
+                    filter: unset;
+                    // color: $green
+                }
+            }
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    &__bottom {
+        padding: 20px 0px;
+        background-color: $green;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        .container{
+            display: flex;
+            align-items: center;
+        }
+        transition: .3s;
+        &.mini {
+            padding: 10px 0px;
+            .header__logo {
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+    
+    &__form {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        border-radius: 5px;
+        input {
+            flex: 1;
+            background: unset;
+            border: unset;
+            padding: 0px 10px;
+            font-size: 20px
+        }
+        button {
+            background-color: $yellow;
+            
+        }
+    }
+    &__links {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        button,a{
+            background: unset;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            margin: 0px 3px;
+            transition: 0.5s;
+            &:hover{
+                background-color: $yellow;
+                img {
+                    filter: unset;
+                    // color: $green;
+                }
+            }
+            img {
+                filter: invert(1);
+            }
+        }
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        color: $white;
+        margin-right: 30px;
+        font-size: 32px;
+        font-weight: 600;
+        img{
+            width: 80px;
+            margin-right: 10px;
+        }
+    }
+    &__catbtn{
+        background-color: $white;
+        color: $green;
+        font-weight: 600;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+        padding: 16px 20px;
+        &:hover {
+            background-color: $yellow;
+        }
+        span {
+            height: 2px;
+            width: 10px;
+            background-color: $green;
+            margin-right: 10px;
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                background-color: $green;
+                height: 1.5px;
+                width: 13px;
+                position: absolute;
+                top: -5px;
+                left: 0;
+                display: inline-block;
+            }
+            &:after {
+                top: 6px;
+                width: 8px;
+            }
+        }
+    }
+    &__add{
+        background-color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-left: 20px;
+        font-weight: 600;
+        color: $green;
+        font-size: 18px;
+        &:hover{
+            background-color: $yellow;
+        }
+    }
+}
+
+@media(max-width:600px) {
+    .header {
+        &__logo {
+            margin: auto;
+        }
+
+        &__add,
+        &__links,
+        &__catbtn,
+        &__top {
+            display: none;
+        }
+    }
+}

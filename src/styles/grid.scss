@@ -1,0 +1,48 @@
+@import './var.scss';
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.col-6 {
+    @include fb(50%);
+    padding: 0px 10px;
+}
+
+.col-3 {
+    @include fb(25%);
+    padding: 0px 10px;
+}
+
+.col-8 {
+    @include fb(66.66%);
+    padding: 0px 10px;
+}
+
+.col-4 {
+    @include fb(33.33%);
+    padding: 0px 10px;
+}
+
+@media(max-width:600px) {
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .col-sm-6 {
+        @include fb(50%);
+        padding: 0px 10px;
+    }
+    .col-sm-12 {
+        @include fb(100%);
+        padding: 0px 10px;
+    }
+}

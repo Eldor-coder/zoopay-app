@@ -1,0 +1,26 @@
+$dark-green : #006b44;
+$green : #008554;
+$red : #e53935;
+$black : #000;
+$white : #fff;
+$yellow : #ffeb6f;
+$instagram : linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+
+@mixin bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin fb($w) {
+    flex-basis: $w;
+    max-width: $w;
+    width: $w;
+}

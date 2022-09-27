@@ -1,0 +1,43 @@
+@import '../var.scss';
+
+.user {
+    .row {
+        justify-content: space-between;
+    }
+    margin-top: 30px;
+    margin-bottom: 50px;
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    &__left {
+        background-color: #fff;
+        padding: 10px;
+        @include fb(25%);
+    }
+    &__right {
+        background-color: #fff;
+        padding: 10px;
+        @include fb(74%);
+        border-radius: 10px;
+        
+       
+    }
+    &__menu {
+        a {
+            font-size: 16px;
+            color: $black;
+            display: block;
+            margin: 5px 0px;
+            padding: 5px 10px;
+            border-bottom: 1px solid #e7e7e7;
+            &.router-link-active {
+                font-weight: 600;
+                border-bottom-color: $black;
+            }
+        }
+    }
+}
